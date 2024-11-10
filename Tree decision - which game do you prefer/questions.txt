@@ -1,0 +1,7 @@
+Pytania do algorytmu "Która gra do ciebie pasuje" 
+
+1. Czy wolisz gry jednoosobowe czy granie ze znajomymi?
+2. Czy wolisz widok pierwszo czy trzecioosobowy?
+3. Czy wolisz gry surwiwalowe czy gry akcji?
+4. Czy wolisz gry na PC czy na konsole?
+

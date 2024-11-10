@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="{{ url_for('static', filename='css/style.css') }}">"
+    <title>Wynik</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Gra, która pasuje do Ciebie to: {{ game_title }}</h1>
+        <img src="{{ url_for('static', filename='images/' + image_file) }}" alt="Okładka gry" class="game-cover">
+    <br><br>
+    <form action="/">
+        <button type="submit" class="button">Powrót do strony głównej</button>
+</body>
+</html>
