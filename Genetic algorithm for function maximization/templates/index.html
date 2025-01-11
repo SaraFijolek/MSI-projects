@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorytm Genetyczny</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Algorytm Genetyczny: Maksymalizacja Funkcji Matematycznej</h1>
+     <p><strong>Maksimum funkcji:</strong></p>
+     <p><code>f(x) = x ⋅ sin(x), gdzie x ∈ [0, 10]</code></p>
+
+    <form method="POST">
+        <label for="lower_bound">Dolna granica:</label>
+        <input type="number" step="0.01" id="lower_bound" name="lower_bound" required>
+        
+        <label for="upper_bound">Górna granica:</label>
+        <input type="number" step="0.01" id="upper_bound" name="upper_bound" required>
+        
+        <label for="population_size">Rozmiar populacji:</label>
+        <input type="number" id="population_size" name="population_size" required>
+        
+        <label for="generations">Liczba pokoleń:</label>
+        <input type="number" id="generations" name="generations" required>
+        
+        <label for="mutation_rate">Wskaźnik mutacji (0-1):</label>
+        <input type="number" step="0.01" id="mutation_rate" name="mutation_rate" required>
+        
+        <button type="submit">Uruchom algorytm</button>
+    </form>
+
+    {% if result %}
+        {% if result.error %}
+            <p style="color: red;">{{ result.error }}</p>
+        {% else %}
+            <h2>Wyniki:</h2>
+            <p><strong>Najlepsze x:</strong> {{ result.best_x }}</p>
+            <p><strong>Maksymalna wartość funkcji:</strong> {{ result.best_fitness }}</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
